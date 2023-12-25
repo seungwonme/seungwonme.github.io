@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "seungwonme",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "개발 블로그",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Seungwon An <seungwonan.me@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/seungwonme/seungwonme.github.io/issues"
   },
   "dependencies": {
     "@fontsource-variable/montserrat": "^5.0.4",
@@ -27,16 +27,17 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "gatsby-post-gen": "^1.0.0",
     "prettier": "^2.8.8"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://seungwonme.github.io/",
   "keywords": [
     "gatsby"
   ],
   "license": "0BSD",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/seungwonme/seungwonme.github.io.git"
   },
   "scripts": {
     "build": "gatsby build",
@@ -45,6 +46,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "create": "gatsby-post-gen",
     "deploy": "gatsby build && gh-pages -d public -b deploy",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }
