@@ -47,7 +47,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "create": "gatsby-post-gen",
-    "deploy": "gatsby build && gh-pages -d public -b deploy",
+    "deploy": "gatsby build && gh-pages -d public -b deploy -r 'git@github.com:seungwonme/seungwonme.github.io.git'",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }
 }
