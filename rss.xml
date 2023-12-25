@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[개발 블로그]]></description><link>https://seungwonme.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 Dec 2023 18:15:21 GMT</lastBuildDate><item><title><![CDATA[Things to post]]></title><description><![CDATA[깃허브 협업 방법 정리 브랜치 전략 커밋 메세지 템플릿 이슈 템플릿 PR 템플릿 action]]></description><link>https://seungwonme.github.io/things_to_post/</link><guid isPermaLink="false">https://seungwonme.github.io/things_to_post/</guid><pubDate>Tue, 26 Dec 2023 01:46:37 GMT</pubDate><content:encoded>&lt;ol&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[개발 블로그]]></description><link>https://seungwonme.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 Dec 2023 18:27:42 GMT</lastBuildDate><item><title><![CDATA[Things to post]]></title><description><![CDATA[깃허브 협업 방법 정리 브랜치 전략 커밋 메세지 템플릿 이슈 템플릿 PR 템플릿 action]]></description><link>https://seungwonme.github.io/things_to_post/</link><guid isPermaLink="false">https://seungwonme.github.io/things_to_post/</guid><pubDate>Tue, 26 Dec 2023 01:46:37 GMT</pubDate><content:encoded>&lt;ol&gt;
 &lt;li&gt;깃허브 협업 방법 정리
 &lt;ul&gt;
 &lt;li&gt;브랜치 전략&lt;/li&gt;
@@ -330,8 +330,7 @@ Symbol Table은 Compile된 Binary를 그에 맞게 상호 Mapping 해주는 역�
 &lt;code class=&quot;language-text&quot;&gt;command alias 별명 &quot;줄이고 싶은 Command&quot;&lt;/code&gt; 형식으로 지정해두면 사라지지 않는다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-basics.html&quot;&gt;apple lldb&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Useful Linux Commands]]></title><description><![CDATA[Useful Linux Commands File System cp mv Network ifconfig ifconfig | grep inet => ip address
-ifconfig | grep ether => MAC address a b Process…]]></description><link>https://seungwonme.github.io/useful_linux_commands/</link><guid isPermaLink="false">https://seungwonme.github.io/useful_linux_commands/</guid><pubDate>Tue, 26 Dec 2023 01:46:37 GMT</pubDate><content:encoded>&lt;h1&gt;Useful Linux Commands&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Useful Linux Commands]]></title><description><![CDATA[Useful Linux Commands File System cp mv pbcopy  명령어는 표준 입력을 클립보드에 복사합니다. pbpaste  명령어는 클립보드의 내용을 표준 출력으로 복사합니다. Network ifconfig ifconfig…]]></description><link>https://seungwonme.github.io/useful_linux_commands/</link><guid isPermaLink="false">https://seungwonme.github.io/useful_linux_commands/</guid><pubDate>Tue, 26 Dec 2023 01:46:37 GMT</pubDate><content:encoded>&lt;h1&gt;Useful Linux Commands&lt;/h1&gt;
 &lt;h2&gt;File System&lt;/h2&gt;
 &lt;h3&gt;cp&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; abc.txt def.txt &lt;span class=&quot;token comment&quot;&gt;#abc.txt 파일을 def.txt로 이름을 바꾸어 복사합니다.&lt;/span&gt;
@@ -366,7 +365,13 @@ ifconfig | grep ether => MAC address a b Process…]]></description><link>https:
 &lt;span class=&quot;token function&quot;&gt;mv&lt;/span&gt; abc xyz/zzz
 &lt;span class=&quot;token comment&quot;&gt;# abc가 디렉토리이고 xyz/zzz라는 디렉토리가 없다면, abc 디렉토리를 xyz 디렉토리 안으로 zzz로 이름을 바꾸어 이동합니다.&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# abc가 디렉토리이고 xyz/zzz라는 디렉토리가 있다면, abc 디렉토리를 xyz/zzz 디렉토리 안으로 이동합니다. 즉 xyz/zzz/abc가 됩니다.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Network&lt;/h1&gt;
+&lt;h3&gt;pbcopy&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;pbcopy&lt;/code&gt; 명령어는 표준 입력을 클립보드에 복사합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Hello World&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; pbcopy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;pbpaste&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;pbpaste&lt;/code&gt; 명령어는 클립보드의 내용을 표준 출력으로 복사합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;pbpaste &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; hello.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Network&lt;/h2&gt;
 &lt;h3&gt;ifconfig&lt;/h3&gt;
 &lt;p&gt;ifconfig | grep inet =&gt; ip address
 ifconfig | grep ether =&gt; MAC address&lt;/p&gt;
