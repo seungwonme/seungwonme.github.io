@@ -48,7 +48,23 @@ mv abc xyz/zzz
 # abc가 디렉토리이고 xyz/zzz라는 디렉토리가 있다면, abc 디렉토리를 xyz/zzz 디렉토리 안으로 이동합니다. 즉 xyz/zzz/abc가 됩니다.
 ```
 
-# Network
+### pbcopy
+
+`pbcopy` 명령어는 표준 입력을 클립보드에 복사합니다.
+
+```shell
+echo "Hello World" | pbcopy
+```
+
+### pbpaste
+
+`pbpaste` 명령어는 클립보드의 내용을 표준 출력으로 복사합니다.
+
+```shell
+pbpaste > hello.txt
+```
+
+## Network
 
 ### ifconfig
 
