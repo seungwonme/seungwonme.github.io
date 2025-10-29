@@ -1,0 +1,30 @@
+[
+  {
+    "file": "second-post.md",
+    "title": "JavaScript 비동기 프로그래밍 완벽 가이드",
+    "date": "2025-01-27",
+    "tags": [
+      "JavaScript",
+      "비동기",
+      "Promise",
+      "async/await",
+      "프론트엔드"
+    ],
+    "category": "Tutorial",
+    "description": "JavaScript에서 비동기 프로그래밍의 기초부터 고급 패턴까지 완벽하게 이해해보자",
+    "excerpt": "현대 JavaScript 개발에서 비동기 프로그래밍은 필수적인 개념입니다. 이 글에서는 콜백 지옥부터 최신 async/await 패턴까지 모든 것을 다뤄보겠습니다. 1. ( 2. ( 3. ( 4. ( 5. ( 6. ( - 가독성이 떨어짐 - 에러 처리가 복잡함 - 디버깅이 어려움 - 유지보수가 힘듦 JavaScript 비동기 프로그래밍은 처음에는 복잡해 보..."
+  },
+  {
+    "file": "example.md",
+    "title": "나의 첫 번째 블로그 포스트",
+    "date": "2025-01-26",
+    "tags": [
+      "블로그",
+      "시작하기",
+      "웹개발"
+    ],
+    "category": "Tutorial",
+    "description": "GitHub Pages로 만든 정적 블로그의 첫 번째 포스트입니다.",
+    "excerpt": "나의 첫 번째 블로그 포스트에 오신 것을 환영합니다! 이 블로그는 로 만들어졌어요. - : 정적 파일만으로 구성되어 있어요 - : 모바일에서도 잘 보여요 - : 눈에 편한 테마를 선택할 수 있어요 - : 게시글을 쉽게 찾을 수 있어요 - : 관심 있는 주제로 필터링할 수 있어요 - : Giscus로 GitHub Discussions과 연동돼요 이 블로그는"
+  }
+]

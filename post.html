@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시글 상세</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/prism.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="site-title">
+        <a href="index.html" class="site-title-link">나의 블로그</a>
+      </h1>
+      <nav class="nav">
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <article class="post-content">
+        <div id="post-container">
+          <!-- 게시글 내용이 여기로 로드됩니다 -->
+        </div>
+
+        <!-- Giscus 댓글 -->
+        <div id="giscus-container" class="giscus-container">
+          <h3>댓글</h3>
+          <div id="giscus-thread"></div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 나의 블로그. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- CDN 라이브러리들 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+  <!-- 앱 스크립트들 -->
+  <script src="js/post-loader.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+
+</html>
