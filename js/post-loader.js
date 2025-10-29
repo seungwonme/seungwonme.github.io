@@ -2,6 +2,7 @@
 class PostLoader {
   constructor() {
     this.postContainer = document.getElementById('post-container');
+    this.giscusThemeObserver = null;
     this.init();
   }
 
@@ -180,53 +181,97 @@ class PostLoader {
   }
 
   loadGiscus() {
+    const giscusThread = document.getElementById('giscus-thread');
+    if (!giscusThread) {
+      return;
+    }
+
+    // 기존 Giscus 인스턴스 제거
+    giscusThread.innerHTML = '';
+
     // Giscus 스크립트 동적 로드
     const script = document.createElement('script');
     script.src = 'https://giscus.app/client.js';
     script.async = true;
+    script.crossOrigin = 'anonymous';
 
-    // Giscus 설정 (이 값들은 실제 Giscus 설정에 맞게 변경해야 합니다)
-    script.setAttribute('data-repo', 'your-username/your-repo-name');
-    script.setAttribute('data-repo-id', 'YOUR_REPO_ID');
+    const initialTheme = this.getGiscusTheme();
+
+    // Giscus 설정
+    script.setAttribute('data-repo', 'seungwonme/seungwonme.github.io');
+    script.setAttribute('data-repo-id', 'R_kgDOQLHI0Q');
     script.setAttribute('data-category', 'General');
-    script.setAttribute('data-category-id', 'YOUR_CATEGORY_ID');
+    script.setAttribute('data-category-id', 'DIC_kwDOQLHI0c4CxMai');
     script.setAttribute('data-mapping', 'pathname');
     script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '1');
-    script.setAttribute('data-emit-metadata', '1');
+    script.setAttribute('data-emit-metadata', '0');
     script.setAttribute('data-input-position', 'bottom');
-    script.setAttribute('data-theme', this.getGiscusTheme());
+    script.setAttribute('data-theme', initialTheme);
     script.setAttribute('data-lang', 'ko');
 
-    // 테마 변경 감지 및 Giscus 테마 업데이트
-    const observer = new MutationObserver(() => {
+    this.setupGiscusThemeObserver();
+
+    giscusThread.appendChild(script);
+  }
+
+  getGiscusTheme() {
+    const documentTheme = document.documentElement.getAttribute('data-theme');
+
+    if (documentTheme === 'dark' || documentTheme === 'light') {
+      return documentTheme;
+    }
+
+    return this.determineInitialTheme();
+  }
+
+  setupGiscusThemeObserver() {
+    if (this.giscusThemeObserver) {
+      return;
+    }
+
+    this.giscusThemeObserver = new MutationObserver(() => {
       const newTheme = this.getGiscusTheme();
       const giscusFrame = document.querySelector('iframe.giscus-frame');
-      if (giscusFrame) {
-        const message = {
-          setConfig: {
-            theme: newTheme,
-          },
-        };
+
+      if (giscusFrame && giscusFrame.contentWindow) {
         giscusFrame.contentWindow.postMessage(
-          { giscus: message },
+          {
+            giscus: {
+              setConfig: {
+                theme: newTheme,
+              },
+            },
+          },
           'https://giscus.app',
         );
       }
     });
 
-    observer.observe(document.documentElement, {
+    this.giscusThemeObserver.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ['data-theme'],
     });
-
-    document.getElementById('giscus-thread').appendChild(script);
   }
 
-  getGiscusTheme() {
-    return document.documentElement.getAttribute('data-theme') === 'dark'
-      ? 'dark'
-      : 'light';
+  determineInitialTheme() {
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || savedTheme === 'light') {
+        return savedTheme;
+      }
+    } catch (error) {
+      console.warn('저장된 테마를 불러오지 못했습니다:', error);
+    }
+
+    if (
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
+      return 'dark';
+    }
+
+    return 'light';
   }
 
   showLoading() {
